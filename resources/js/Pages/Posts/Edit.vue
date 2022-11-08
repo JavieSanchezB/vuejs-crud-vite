@@ -20,7 +20,7 @@ const submit = () => {
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Edit Post
+                Editar Publicación
             </h2>
         </template>
         <div class="py-12">
@@ -32,7 +32,7 @@ const submit = () => {
                                 className="px-6 py-2 text-white bg-blue-500 rounded-md focus:outline-none"
                                 :href="route('posts.index')"
                             >
-                                Back
+                                Regresar
                             </Link>
                         </div>
                         <form name="createForm" @submit.prevent="submit">
@@ -69,7 +69,7 @@ const submit = () => {
                                         type="submit"
                                         className="px-6 py-2 font-bold text-white bg-green-500 rounded"
                                     >
-                                        Save
+                                        Guardar
                                     </button>
                                 </div>
                             </form>

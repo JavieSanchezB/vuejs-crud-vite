@@ -28,11 +28,11 @@ const showingNavigationDropdown = ref(false);
                             <!-- Navigation Links -->
                             <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                                 <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                                    Dashboard
+                                    Tablero
                                 </BreezeNavLink>
                                 
                                 <BreezeNavLink :href="route('posts.index')" :active="route().current('posts.index')">
-                                    Posts
+                                    Publicaciones
                                 </BreezeNavLink>
                             </div>
                         </div>
@@ -55,7 +55,7 @@ const showingNavigationDropdown = ref(false);
 
                                     <template #content>
                                         <DropdownLink :href="route('logout')" method="post" as="button">
-                                            Log Out
+                                           Cerrar sesión
                                         </DropdownLink>
                                     </template>
                                 </Dropdown>
@@ -78,10 +78,10 @@ const showingNavigationDropdown = ref(false);
                 <div :class="{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown}" class="sm:hidden">
                     <div class="pt-2 pb-3 space-y-1">
                         <BreezeNavLink :href="route('dashboard')" :active="route().current('dashboard')">
-                            Dashboard
+                            Tablero
                         </BreezeNavLink >
                         <!-- <BreezeNavLink :href="route('posts.index')" :active="route().current('posts.index')">
-                            Dashboard
+                            Tablero
                         </BreezeNavLink >-->
                     </div>
 
@@ -94,7 +94,7 @@ const showingNavigationDropdown = ref(false);
 
                         <div class="mt-3 space-y-1">
                             <ResponsiveNavLink :href="route('logout')" method="post" as="button">
-                                Log Out
+                            Cerrar sesión
                             </ResponsiveNavLink>
                         </div>
                     </div>

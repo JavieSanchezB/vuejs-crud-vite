@@ -16,7 +16,7 @@ function destroy(id) {
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Laravel 9 Vue JS CRUD App using Vite Example - LaravelTuts.com
+                Laravel 9 VueJS CRUD App usando Vite 
             </h2>
         </template>
         <div class="py-12">
@@ -28,16 +28,16 @@ function destroy(id) {
                                 className="px-6 py-2 text-white bg-green-500 rounded-md focus:outline-none"
                                 :href="route('posts.create')"
                             >
-                                Create Post
+                               Crear Publicaciones 
                             </Link>
                         </div>
                         <table className="table-fixed w-full">
                             <thead>
                                 <tr className="bg-gray-100">
                                     <th className="px-4 py-2 w-20">No.</th>
-                                    <th className="px-4 py-2">Title</th>
-                                    <th className="px-4 py-2">Body</th>
-                                    <th className="px-4 py-2">Action</th>
+                                    <th className="px-4 py-2">Título</th>
+                                    <th className="px-4 py-2">Publicación</th>
+                                    <th className="px-4 py-2">Acción</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -51,7 +51,7 @@ function destroy(id) {
                                             className="px-4 py-2 text-sm text-white bg-blue-500 rounded"
                                             :href="route('posts.edit', post.id)"
                                         >
-                                            Edit
+                                            Editar
                                         </Link>
                                         <button
                                             @click="destroy(post.id)"
@@ -59,7 +59,7 @@ function destroy(id) {
                                             type="button"
                                             className="mx-1 px-4 py-2 text-sm text-white bg-red-500 rounded"
                                         >
-                                            Delete
+                                            Borrar
                                         </button>
                                     </td>
                                 </tr>
@@ -69,5 +69,7 @@ function destroy(id) {
                 </div>
             </div>
         </div>
+
+      
     </BreezeAuthenticatedLayout>
 </template>
