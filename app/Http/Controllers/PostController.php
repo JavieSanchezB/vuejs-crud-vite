@@ -1,7 +1,7 @@
 <?php
    
 namespace App\Http\Controllers;
-    
+use Illuminate\Foundation\Application;    
 use Illuminate\Http\Request;
 use Inertia\Inertia;
 use App\Models\Post;
@@ -18,8 +18,11 @@ class PostController extends Controller
     {
        /*return 'Hello, World!';*/
         $posts = Post::all();
- 
-        return Inertia::render('Posts/Index', ['posts' => $posts]);
+        $laravelVersion = Application::VERSION;
+        $phpVersion = PHP_VERSION;
+     //dd($laravelVersion);
+       // dd($phpVersion);
+        return Inertia::render('Posts/Index', ['posts' => $posts,'laravelVersion' => $laravelVersion,'phpVersion' => $phpVersion]);
      
     }
   

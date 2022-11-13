@@ -1,12 +1,16 @@
 <script setup>
 import BreezeAuthenticatedLayout from '@/Layouts/Authenticated.vue';
-import { Head, Link, useForm } from '@inertiajs/inertia-vue3';
+import { Head, Link, useForm, lv, pv  } from '@inertiajs/inertia-vue3';
+
+
 defineProps({
     posts: Array,
+    laravelVersion: String,
+    phpVersion: String
 });
 const form = useForm();
 function destroy(id) {
-    if (confirm("Are you sure you want to Delete")) {
+    if (confirm("¿Estás seguro de que quieres eliminar?")) {
         form.delete(route('posts.destroy', id));
     }
 }
@@ -16,7 +20,7 @@ function destroy(id) {
     <BreezeAuthenticatedLayout>
         <template #header>
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-                Laravel 9 VueJS CRUD App usando Vite 
+                Laravel {{ laravelVersion }} PHP {{ phpVersion }}  VueJS CRUD App usando Vite 
             </h2>
         </template>
         <div class="py-12">

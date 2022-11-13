@@ -1,12 +1,7 @@
 <script setup>
 import AuthenticatedLayout from '@/Layouts/Authenticated.vue';
-import { Head, Link } from '@inertiajs/inertia-vue3';
-defineProps({
-    canLogin: Boolean,
-    canRegister: Boolean,
-    laravelVersion: String,
-    phpVersion: String,
-})
+import { Head} from '@inertiajs/inertia-vue3';
+
 </script>
 
 <template>
@@ -17,7 +12,7 @@ defineProps({
             <h2 class="font-semibold text-xl text-gray-800 leading-tight">
                 Tablero Principal
             </h2>
-            <h2 class="font-semibold text-xl text-gray-800 leading-tight">    Laravel v{{ laravelVersion }} (PHP v{{ phpVersion }})  </h2>
+          
         </template>
 
         <div class="py-12">
